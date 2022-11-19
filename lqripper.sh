@@ -3,12 +3,14 @@
 #select image
 img_var=$(zenity --file-selection \
         --title="Select image" \
+        --file-filter="*.jpg *.jpeg *.png *.bmp *.tiff" \
         --filename "/home/${USER}/"); echo $img_var
 echo
 
 #select audio
 audio_var=$(zenity --file-selection \
         --title="Select audio" \
+        --file-filter="*.mp3 *.wav *.ogg *.flac *.m4a *.aiff" \
         --filename "/home/${USER}/"); echo $audio_var
 
 echo
@@ -30,6 +32,5 @@ output_var=$(echo $directory_var/$name_var); echo $output_var
 echo
 #encode video and open output directory if successful
 ffmpeg -loop 1 -i "$img_var" -i "$audio_var" -c:v libx264 -tune stillimage -c:a aac -b:a 192k -pix_fmt yuv420p -shortest "$output_var.mp4" && xdg-open "$directory_var"
-
 echo
 exit
