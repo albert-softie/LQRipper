@@ -25,6 +25,7 @@ bash <(curl -Ls https://github.com/albert-softie/LQRipper/raw/main/lqripper.sh)
 If all goes well, the video should be encoded properly and the previously selected output directory will automatically open.
 
 # To-do list
+- make hitting cancel and/or closing any of the dialogue boxes actually exit the script
 - graphical error messages
 - make opening the output directory optional
 - windows version maybe
