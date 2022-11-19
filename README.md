@@ -1,7 +1,7 @@
 # LQRipper
 <sub>(short for **L**inux **Q**uality Ripper)</sub>
 
-Basic bash script for automatically combining a still image and audio file into an mp4 file.
+Basic bash script for automatically combining a still image and audio file into an mp4 video.
 
 Tested only on EndeavourOS but in theory it should work on basically any linux distro.
 
