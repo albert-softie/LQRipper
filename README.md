@@ -29,4 +29,4 @@ If all goes well, the video should be encoded properly and the previously select
 - graphical error messages
 - make opening the output directory optional
 - windows version maybe
-- probably a bunch of other things
+- probably a bunch of other things i'm forgetting
