@@ -6,7 +6,7 @@ Basic bash script for automatically combining a still image and audio file into 
 Tested only on EndeavourOS but in theory it should work on basically any linux distro.
 
 # Prerequisites
-This script requires [Zenity](https://gitlab.gnome.org/GNOME/zenity) and [ffmpeg](https://ffmpeg.org/download.html#get-sources) in order to work. If you somehow don't have either, look up how to install them yourself, it's honestly not that hard.
+This script requires [Zenity](https://gitlab.gnome.org/GNOME/zenity) and [ffmpeg](https://ffmpeg.org) in order to work. If you somehow don't have either, look up how to install them yourself, it's honestly not that hard.
 
 # How to use
 **1.** Run the script by opening a terminal and entering the following
