@@ -27,6 +27,6 @@ If all goes well, the video should be encoded properly and the previously select
 # To-do list
 - make hitting cancel and/or closing any of the dialogue boxes actually exit the script
 - graphical error messages
-- make opening the output directory optional
+- ~~make opening the output directory optional~~ ✔️
 - windows version maybe
 - probably a bunch of other things i'm forgetting
