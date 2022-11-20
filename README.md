@@ -22,7 +22,7 @@ bash <(curl -Ls https://github.com/albert-softie/LQRipper/raw/main/lqripper.sh)
 
 **4.** Enter the desired file name.
 
-If all goes well, the video should be encoded properly and the previously selected output directory will automatically open.
+If all goes well, the video should be encoded properly and a message will appear asking if you want to open the output directory.
 
 # To-do list
 - make hitting cancel and/or closing any of the dialogue boxes actually exit the script
