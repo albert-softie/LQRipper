@@ -22,7 +22,7 @@ directory_var=$(zenity --file-selection \
 
 echo
 #set filename
-name_var=$(zenity --entry --title "LQRipper" \
+name_var=$(zenity --entry --title "LQ Ripper" \
         --text "Enter desired file name"); echo $name_var
 
 echo
@@ -31,6 +31,16 @@ output_var=$(echo $directory_var/$name_var); echo $output_var
 
 echo
 #encode video and open output directory if successful
-ffmpeg -loop 1 -i "$img_var" -i "$audio_var" -c:v libx264 -tune stillimage -c:a aac -b:a 192k -pix_fmt yuv420p -shortest "$output_var.mp4" && xdg-open "$directory_var"
+ffmpeg -loop 1 -i "$img_var" -i "$audio_var" -c:v libx264 -tune stillimage -c:a aac -b:a 192k -pix_fmt yuv420p -shortest "$output_var.mp4" && zenity --question \
+		 --title="LQ Ripper" \
+		 --ok-label="Yes" \
+		 --cancel-label="No" \
+		 --text="Thank you for using LQ Ripper, your rip has been processed. Look forward to uploading it to your channel!\n\nPlease feel free to process more of your work in the future!\n\nWould you like to open the output directory?"
+ans=$?
+if [ $ans -eq 0 ]; then
+	xdg-open "$directory_var"
+else
+	exit
+fi
 echo
 exit
