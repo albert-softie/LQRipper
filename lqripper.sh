@@ -31,7 +31,7 @@ output_var=$(echo $directory_var/$name_var); echo $output_var
 
 echo
 #encode video and open output directory if successful
-ffmpeg -loop 1 -i "$img_var" -i "$audio_var" -c:v libx264 -tune stillimage -c:a aac -b:a 192k -pix_fmt yuv420p -shortest "$output_var.mp4" && zenity --question \
+ffmpeg -r 1 -f image2 -loop 1 -i "$img_var" -i "$audio_var" -c:v mpeg4 -q:v 2 -c:a copy -shortest "$output_var.avi" && zenity --question \
 		 --title="LQ Ripper" \
 		 --ok-label="Yes" \
 		 --cancel-label="No" \
